@@ -8,10 +8,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class managerPage {
+public class Change_password {
 	WebDriver driver;
 	Properties pr;
-public	managerPage(WebDriver driver,Properties pr ){
+public	Change_password(WebDriver driver,Properties pr ){
 		this.pr=pr;
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -19,29 +19,12 @@ public	managerPage(WebDriver driver,Properties pr ){
 
 
 
-@FindBy(how=How.NAME,using="uid")WebElement userid;
-@FindBy(how=How.NAME,using="password")WebElement password;
-@FindBy(how=How.NAME,using="btnLogin")WebElement clkLogin;
 @FindBy(how=How.XPATH,using="/html/body/div[3]/div/ul/li[11]/a") WebElement changepass;
 @FindBy(how=How.NAME,using="oldpassword")WebElement oldpassword;
 @FindBy(how=How.NAME,using="newpassword")WebElement newpassword;
 @FindBy(how=How.NAME,using="confirmpassword")WebElement confnewpassword;
 @FindBy(how=How.NAME,using="sub")WebElement submitPassword;
-public void setUserID(String userID) {
-	
-	userid.sendKeys(userID);
-	}
 
-public void setPassword(String pasword) {
-	
-	password.sendKeys(pasword);
-	}
-
-public void loginButton() {
-
-clkLogin.click();
-
-}
 public void clk_ChangePass() {
 	changepass.click();
 	}
